@@ -1,0 +1,278 @@
+:root{
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+}
+
+/*-------------------- 
+    Course Section 
+---------------------*/
+
+.course-bg{
+    background: url(https://preview.colorlib.com/theme/eclipse/img/registration-bg.png.webp);
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center;
+}
+
+.courses{
+    width: 1200px;
+    max-width: 100%;
+    margin: auto;
+    padding: 2rem;
+}
+
+.courses-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.courses-heading h2{
+    font-size: 2rem;
+}
+
+.bar-right{
+    width: 5rem;
+    height: 3px;
+    border-radius: 999px;
+    background-color: black;
+}
+
+.bar-left{
+    width: 5rem;
+    height: 3px;
+    border-radius: 999px;
+    background-color: black;
+}
+
+.course-container{
+    margin-top: 2rem;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.course-box{
+    background-color: indigo;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    border-radius: 10px;
+    min-height: 200px;
+    padding: 2rem;
+    box-shadow: 3px 5px 12px indigo;
+}
+
+.course-box-image{
+    width: 40%;
+}
+
+.course-box img{
+    width: 100%;
+}
+
+.course-box-content{
+    color: white;
+    width: 100%;
+}
+
+.course-box-content p{
+    color: white;
+    padding: 1rem 0 2rem 0;
+}
+
+.course-box a{
+    text-align: center;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 1rem 1rem 1rem 1rem;
+    display: inline;
+    color: indigo;
+    background-color: white;
+    transition: all ease-in-out 0.3s;
+}
+
+.course-box-content a i{
+    display: none;
+}
+
+.course-box-content a:hover i,
+.course-box-content a:focus i
+{
+    display: inline;
+}
+
+
+/*====================== 
+    Footer Section
+========================*/
+footer{
+    background-color: rgb(20, 0, 63);
+    color: white;
+}
+
+.core-member-container{
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    padding: 2rem 2rem 2rem 2rem;
+    color: white;
+}
+
+.core-member-title{
+    font-size: 1.5rem;
+    width: 100%;
+    text-align: center;
+}
+
+.core-member-cards{
+    margin-top: 1rem;
+    border-top: 1px dotted white;
+    border-bottom: 1px dotted white;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px , 1fr));
+}
+
+.member-cards{
+    padding: 2rem 0 2rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.member-image{
+    height: 150px;
+    max-width: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 3px 3px 5px black;
+}
+
+.member-image img{
+    text-align: center;
+    width: 100%;
+    object-position: 50% -15px ;
+}
+
+.member-name{
+    margin: 1rem 0 0 0;
+}
+
+footer a:hover i,
+footer a:hover
+{
+    color: purple;
+}
+
+.footer-container{
+    width: 100%;
+    max-width: 1200px;
+    padding: 2rem;
+    margin: auto;
+}
+
+.footer-container-about{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 0 1rem 0;
+}
+
+.footer-container-about li{
+    list-style-type: none;
+}
+
+.footer-content,
+.footer-contact{
+    margin-top: 2rem;
+    padding: .5rem;
+    border-left: 1px dotted white;
+}
+
+.footer-contact h3{
+    margin-bottom: .5rem;
+}
+
+.footer-logo{
+    width: 10rem;
+    height: 10rem;
+    display: block;
+}
+
+.footer-logo img{
+    width: 100%;
+}
+
+
+.copyright{
+    font-size: 0.8rem;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.copyright:hover{
+    color: gray;
+}
+
+
+/*=================== 
+    Media Queries
+====================*/
+
+@media (max-width: 500px) {
+    .courses{
+        padding: 1rem;
+    }
+
+    .course-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .courses-heading h2{
+        font-size: 1.5rem;
+    }
+
+    .footer-container{
+        padding: 1rem;
+    }
+
+    .core-member-container{
+        padding: 1rem;
+    }
+
+    .core-member-container h2{
+        font-size: 1.5rem;
+    }
+    
+
+    .core-member-cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .member-image{
+        width: 100px;
+        height: 100px;
+    }    
+
+    .footer-container-about{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-content,
+    .footer-contact{
+    border: none;
+}
+
+}
+
+
+@media (min-width: 2200px) {
+    .course-bg{
+        background-size: 100%;
+    }
+}

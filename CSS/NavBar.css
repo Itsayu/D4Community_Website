@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam&family=Roboto+Mono&display=swap');
+
+*,
+*::before,
+*::after
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.3s all ease-in-out;
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:active{
+    color: white;
+}
+
+p{
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+body{
+    font-family: 'Roboto Mono', monospace;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+/* =================typewriter effect================= */
+
+.type-writer{
+    display: inline-block;
+}
+
+.typed-out {
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    font-size: 1.8rem;
+    width: 0;
+    /* animation: typing 4s forwards; */
+    animation: typing 4s steps(50) infinite alternate,
+          blink 1000ms steps(50) infinite normal;
+  }
+
+  @keyframes typing {
+    from {
+        width: 0
+    }
+    to {
+        width: 90%
+    }
+  }
+
+  @keyframes blink {
+    from {
+      border-color: black;
+    }
+    to {
+      border-color: transparent;
+    }
+  }
+
+/*=========================
+    Header Section 
+==========================*/
+header{
+    width: 100%;
+    /* background-color: black; */
+    background: url(https://preview.colorlib.com/theme/eclipse/img/home-banner-bg.png.webp);
+    background-repeat: no-repeat;
+}
+
+.header-logo-container{
+    display: flex;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    gap: 1rem;
+}
+
+.header-container{
+    background-size: 100%;
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    padding: 1rem 2rem 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+}
+
+.header-logo{
+    width: 6.5rem;
+}
+
+
+.header-bar{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.header-float-window,
+.header-float-window-list{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 0 1rem 1rem 1rem;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid purple;
+    box-shadow: 3px 5px 12px indigo;
+}
+
+.header-float-window-list{
+    display: none;
+    position: fixed;
+    width: 100%;
+    right: 10px;
+}
+
+.header-float-window li:hover{
+    background-color: whitesmoke;
+}
+
+.study-material:hover .header-float-window-list,
+.study-material:active .header-float-window-list,
+.study-material:focus .header-float-window-list{
+    display: block;
+}
+
+.study-material:active a i,
+.study-material:hover a i,
+.study-material:focus a i{
+    transform: rotate(180deg);
+}
+
+.header-float-window li{
+    width: 100%;
+}
+
+.header-float-window-list li{
+    border-bottom: 1px solid purple;
+}
+
+.header-float-window-list{
+    margin-bottom: 0;
+    padding-bottom: 1rem;
+}
+
+.header-float-window a{
+    display: block;
+    width: 100%;
+    color: purple;
+    border-bottom: 1px solid purple;
+    padding-top: 1rem;
+}
+
+.header-float-window li .header-float-window-list a{
+    border: none;
+    padding: .5rem 0 0 0;
+}
+
+.cross{
+    display: none;
+}
+
+li{
+    cursor: pointer;
+}
+
+.header-title {
+    position: absolute;
+    top: 45rem;
+    left: 10rem;
+    font-size: 1.5rem;
+    font-family: 'Kalam', cursive;
+    width: 50rem;
+    color: linear-gradient(rgb(51, 0, 255), black);
+    background: linear-gradient(to right, #6610f2 0%, #6f42c1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 2rem;
+}
+
+.hero-container{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    min-height: 900px;
+}
+
+.hero{
+    padding-top: 6rem;
+    width: 40%;
+}
+
+.hero h1{
+    font-size: 2.5vw;
+    color: white;
+}
+
+.hero p{
+    padding: 2rem 0 2rem 0;
+    color: white;
+    font-size: 1.4rem;
+}
+
+.hero-image img{
+    width: 80%;
+}
+
+
+@media (min-width: 2200px){
+    header{
+        background-size: 100%;
+    }
+
+    .header-title{
+        top: 55rem;
+    }
+} 
+
+@media (max-width: 4000px) {
+    .header-float-window{
+        position: fixed;
+        top: 5rem;
+        right: -12rem;
+        transform: scale(0);
+    }
+
+    .cross:hover,
+    .cross:active,
+    .bar:hover,
+    .bar:active{
+        transform: rotate(180deg);
+    }
+
+    .show-bar{
+        position: fixed;
+        top: 5rem;
+        right: 1rem;
+        transform: scale(1);
+    }
+} 
+
+@media (max-width: 900px) {
+    .header-container {
+        padding-left: .7rem;
+    }
+
+    .hero-image{
+        display: none;
+    }
+
+    .hero{
+        text-align: center;
+        width: 100%;
+    }
+
+    .hero h1{
+        font-size: 1.5rem;
+        padding-bottom: 20px;
+    }
+
+    .hero p {
+        padding-top: 15px;
+        font-size: 1.2rem;
+    }
+
+    .header-title{
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        left: 0;
+        font-size: 1rem;
+    }
+
+    .typed-out {
+        font-size: 1.3rem;
+        display: inline-block;
+      }
+
+    @keyframes typing {
+        from {
+            width: 0
+        }
+        to {
+            width: 60%
+        }
+    }
+}
+
+@media (max-width:500px) {
+    .header-title{
+        top: 40rem;
+    }
+
+    .typed-out {
+        font-size: 1.3rem;
+        display: inline-block;
+      }
+
+    @keyframes typing {
+        from {
+            width: 0
+        }
+        to {
+            width: 90%
+        }
+      }
+}
